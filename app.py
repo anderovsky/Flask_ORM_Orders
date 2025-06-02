@@ -35,7 +35,7 @@ def orders_by_customer(customer_id):
     orders_dict = []
     for order in orders:
         orders_dict.append(order.dict())
-    return jsonify(orders_dict)
+    return jsonify(orders.dict)
 
 @app.route("/customers/<customer_id>/orders", methods=['POST'])
 def create_order(customer_id):

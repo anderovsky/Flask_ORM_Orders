@@ -8,11 +8,11 @@ class Order(db.Model):
     quantity = db.Column(db.Integer, nullable=False)
     order_date = db.Column(db.DateTime, nullable=False)
 
-def dict(self):
-    return {
-        "id": self.id,
-        "customer_id": self.customer_id,
-        "product_name": self.product_name,
-        "quantity": self.quantity,
-        "order_date": self.order_date
-    }
+    def dict(self):
+        return {
+            "id": self.id,
+            "customer_id": self.customer_id,
+            "product_name": self.product_name,
+            "quantity": self.quantity,
+            "order_date": self.order_date
+        }
